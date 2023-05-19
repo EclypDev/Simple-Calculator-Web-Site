@@ -6,8 +6,19 @@ const addNumber = function(value) { //FUNCTION ADDNUMBER TO DISPLAY
     display.value += value;
 }
 const removeNumber = function(value) { //FUNCTION REMOVENUMBER TO DISPLAY
-    display.value = ""
+    display.value = "0"
 }
-const result = function() { //FUNCTION TO GIVE RESULT TO DISPLAY
-    display.value = eval(display.value);
-}
+const result = function() {
+    try {
+      const equation = display.value;
+      const result = eval(equation);
+      
+      if (Number.isNaN(result) || !Number.isFinite(result)) {
+        display.value = "Error";
+      } else {
+        display.value = result;
+      }
+    } catch (error) {
+      display.value = "Error";
+    }
+  };

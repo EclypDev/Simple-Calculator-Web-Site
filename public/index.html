@@ -8,7 +8,12 @@
     <title>Calculator</title>
 </head>
 <body>
-    <input type="text" id="display" readonly>
+    <div class="calculator">
+        <h1>Calculator by Eclyp</h1>
+        <div class="screen">
+            <input type="text" placeholder="0" id="display" readonly>
+        </div>
+        <div class="buttons">    
     <br>
     <button onclick="addNumber(1)">1</button>
     <button onclick="addNumber(2)">2</button>
@@ -29,6 +34,8 @@
     <button onclick="removeNumber()">AC</button>
     <button onclick="addNumber('*')">*</button>
     <button onclick="result()">=</button>
+        </div>
+    </div>
     <script src="./js/connection.js"></script>
 </body>
 </html>

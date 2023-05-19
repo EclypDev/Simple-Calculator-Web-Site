@@ -1,16 +1,68 @@
+@font-face {
+    font-family: 'DigitalDream';
+    src: url('../fonts/DIGITALDREAM.ttf') format('truetype');
+  }
+  
 * {
     padding: 0;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 input {
-    font-size: 16px;
-    font-family: 'Roboto', sans-serif;
-    width: 200px;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'DigitalDream', Arial, sans-serif;
+    width: 240px;
     height: 40px;
+    border: 2px solid transparent;
+    color: #FFFFFF;
+    background-color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 button {
     margin-top: 5px;
-    margin-left: 5px;
-    height: 40px;
-    width: 40px;
+    padding: 5px;
+    height: 55px;
+    width: 55px;
+    padding: 10px 20px;
+    background-color: #333333;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  
+  /* Efecto 3D */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+button:hover {
+  transform: translateY(2px);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  outline: none; /* Para eliminar el contorno al hacer clic */
+}
+button:active {
+    scale: 0.95;
+}
+.calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 270px;
+    background-color: #222;
+    height: 390px;
+    border-radius: 2px;
+}
+.buttons {
+    margin-bottom: 10px;
+}
+h1 {
+    margin-top: 5px;
+    font-size: 20px;
+    color: #727272;
 }
